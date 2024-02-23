@@ -1,4 +1,4 @@
-package com.bensboyz.food.ui.slideshow
+package com.bensboyz.food.ui.distribution
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.bensboyz.food.databinding.FragmentSlideshowBinding
+import com.bensboyz.food.databinding.FragmentDistributionBinding
 
-class SlideshowFragment : Fragment() {
+class DistributionFragment : Fragment() {
 
-    private var _binding: FragmentSlideshowBinding? = null
+    private var _binding: FragmentDistributionBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class SlideshowFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+        val distributionViewModel =
+            ViewModelProvider(this).get(DistributionViewModel::class.java)
 
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        _binding = FragmentDistributionBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDistribution
+        distributionViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

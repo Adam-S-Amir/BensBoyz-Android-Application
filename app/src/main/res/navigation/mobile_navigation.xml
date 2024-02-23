@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_menu" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.bensboyz.food.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_distribution"
+        android:name="com.bensboyz.food.ui.distribution.DistributionFragment"
+        android:label="@string/menu_distribution"
+        tools:layout="@layout/fragment_distribution" />
 </navigation>

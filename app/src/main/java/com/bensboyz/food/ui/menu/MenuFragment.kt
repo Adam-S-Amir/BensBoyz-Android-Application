@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
+import android.webkit.WebView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bensboyz.food.databinding.FragmentMenuBinding
@@ -11,9 +13,6 @@ import com.bensboyz.food.databinding.FragmentMenuBinding
 class MenuFragment : Fragment() {
 
     private var _binding: FragmentMenuBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,14 +20,18 @@ class MenuFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val menuViewModel =
-            ViewModelProvider(this).get(MenuViewModel::class.java)
-
         _binding = FragmentMenuBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        return root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        val webView: WebView = binding.webview
+        webView.settings.javaScriptEnabled = true
+        webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
+        val url = "https://www.clover.com/online-ordering/bensboyz-food-group-huntersville"
+        webView.loadUrl(url)
     }
 
     override fun onDestroyView() {
