@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_shop"
-        android:name="com.bensboyz.food.ui.shop.ShopFragment"
-        android:label="@string/menu_shop"
-        tools:layout="@layout/fragment_shop" />
+        android:id="@+id/nav_menu"
+        android:name="com.bensboyz.food.ui.menu.MenuFragment"
+        android:label="@string/menu_menu"
+        tools:layout="@layout/fragment_menu" />
 
     <fragment
         android:id="@+id/nav_slideshow"

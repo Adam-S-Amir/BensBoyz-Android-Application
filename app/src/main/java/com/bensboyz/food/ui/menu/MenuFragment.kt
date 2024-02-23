@@ -1,18 +1,16 @@
-package com.bensboyz.food.ui.shop
+package com.bensboyz.food.ui.menu
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.bensboyz.food.databinding.FragmentShopBinding
+import com.bensboyz.food.databinding.FragmentMenuBinding
 
-class ShopFragment : Fragment() {
+class MenuFragment : Fragment() {
 
-    private var _binding: FragmentShopBinding? = null
+    private var _binding: FragmentMenuBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,10 +21,10 @@ class ShopFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val shopViewModel =
-            ViewModelProvider(this).get(ShopViewModel::class.java)
+        val menuViewModel =
+            ViewModelProvider(this).get(MenuViewModel::class.java)
 
-        _binding = FragmentShopBinding.inflate(inflater, container, false)
+        _binding = FragmentMenuBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
