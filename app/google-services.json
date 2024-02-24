@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "955863779400",
+    "project_id": "bensboyz-food",
+    "storage_bucket": "bensboyz-food.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955863779400:android:450b369f76106beb88707d",
+        "android_client_info": {
+          "package_name": "com.bensboyz.food"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiWXxzB8BThKU1SEx6XFDsstEECuk9m8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

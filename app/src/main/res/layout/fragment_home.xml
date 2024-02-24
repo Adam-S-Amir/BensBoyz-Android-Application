@@ -5,70 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/chocolate"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".ui.home.HomeFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="192dp"
-        android:layout_height="198dp"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="29dp"
         android:src="@drawable/logo"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="81dp"
         android:fontFamily="@font/font"
         android:text="Welcome to Ben's Boyz"
         android:textColor="@color/Tan"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="148dp"
-        android:layout_height="60dp"
-        android:text="Providing Premium Comfort Food."
-        android:textAlignment="center"
-        android:textColor="@color/Tan"
-        android:textSize="15sp"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="52dp" />
+    <!-- Guideline for buttons position -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="175dp"
-        android:layout_height="95dp"
-        android:text="Button 1"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="315dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:text="Start your order"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="175dp"
-        android:layout_height="95dp"
-        android:text="Button 2"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="315dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="175dp"
-        android:layout_height="95dp"
-        android:text="Button 3"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="415dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="175dp"
-        android:layout_height="95dp"
-        android:text="Button 4"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="415dp" />
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:text="Catering"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
