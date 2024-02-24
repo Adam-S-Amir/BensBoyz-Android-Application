@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_menu"
         android:name="com.bensboyz.food.ui.menu.MenuFragment"
         android:label="@string/title_menu"
         tools:layout="@layout/fragment_menu" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.bensboyz.food.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_distribution"
+        android:name="com.bensboyz.food.ui.distribution.DistributionFragment"
+        android:label="@string/title_distribution"
+        tools:layout="@layout/fragment_distribution" />
 </navigation>
