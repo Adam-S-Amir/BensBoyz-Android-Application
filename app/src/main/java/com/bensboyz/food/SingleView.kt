@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 class SingleView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.singleview)
+        setContentView(R.layout.fragment_single_view)
+        getSupportActionBar()?.hide()
 
         val i: Intent? = intent
         val position: Int? = i?.extras?.getInt("id")
@@ -25,4 +26,7 @@ class SingleView : AppCompatActivity() {
             txtView.text = imageAdapter.mThumbIdsandText.getOrNull(it)?.second
         }
     }
+
+
+
 }

@@ -22,4 +22,5 @@
         android:name="com.bensboyz.food.ui.distribution.DistributionFragment"
         android:label="@string/title_distribution"
         tools:layout="@layout/fragment_distribution" />
+
 </navigation>

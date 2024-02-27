@@ -37,6 +37,7 @@ class DistributionFragment : Fragment() {
         }
 
         return root
+
     }
 
     override fun onDestroyView() {

@@ -10,10 +10,14 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
+        android:enableOnBackInvokedCallback="true"
         android:theme="@style/Theme.BensBoyzFood"
         tools:targetApi="31">
         <activity
             android:name=".SingleView"
+            android:exported="false" />
+        <activity
+            android:name=".DynamicHeightGridView"
             android:exported="false" />
         <activity
             android:name=".ImageAdapter"
