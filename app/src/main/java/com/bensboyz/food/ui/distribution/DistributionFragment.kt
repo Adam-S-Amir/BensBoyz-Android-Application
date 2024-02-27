@@ -1,20 +1,20 @@
 package com.bensboyz.food.ui.distribution
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.AdapterView
+import android.widget.GridView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import com.bensboyz.food.ImageAdapter
+import com.bensboyz.food.R
+import com.bensboyz.food.SingleView
 import com.bensboyz.food.databinding.FragmentDistributionBinding
 
 class DistributionFragment : Fragment() {
-
     private var _binding: FragmentDistributionBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,11 +22,19 @@ class DistributionFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val distributionViewModel =
-            ViewModelProvider(this).get(DistributionViewModel::class.java)
-
         _binding = FragmentDistributionBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        val root = binding.root
+
+        val gridView: GridView = root.findViewById(R.id.gridView)
+        gridView.adapter = ImageAdapter(requireContext())
+
+        gridView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            // Send intent to SingleViewActivity
+            val i = Intent(requireContext(), SingleView::class.java)
+            // Pass image index
+            i.putExtra("id", position)
+            startActivity(i)
+        }
 
         return root
     }
