@@ -23,4 +23,10 @@
         android:label="@string/title_distribution"
         tools:layout="@layout/fragment_distribution" />
 
+    <fragment
+        android:id="@+id/navigation_contact"
+        android:name="com.bensboyz.food.ui.contact.Contact"
+        android:label="@string/title_contact"
+        tools:layout="@layout/fragment_contact" />
+
 </navigation>

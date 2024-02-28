@@ -16,4 +16,9 @@
         android:icon="@drawable/distribution"
         android:title="@string/title_distribution" />
 
+    <item
+        android:id="@+id/navigation_contact"
+        android:icon="@drawable/contact"
+        android:title="@string/title_contact" />
+
 </menu>
