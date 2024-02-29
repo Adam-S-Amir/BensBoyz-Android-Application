@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/navigation_contact"
-        android:name="com.bensboyz.food.ui.contact.Contact"
+        android:name="com.bensboyz.food.ui.contact.ContactFragment"
         android:label="@string/title_contact"
         tools:layout="@layout/fragment_contact" />
 

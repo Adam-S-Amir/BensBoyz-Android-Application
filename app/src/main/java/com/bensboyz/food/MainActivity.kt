@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_menu, R.id.navigation_distribution
+                R.id.navigation_home, R.id.navigation_menu, R.id.navigation_distribution, R.id.navigation_contact
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
